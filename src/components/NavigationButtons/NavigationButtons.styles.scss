@@ -1,0 +1,29 @@
+.page-buttons-container {
+  height: 11.57%;
+
+  .page-buttons {
+    position: relative;
+    .prev-page {
+      cursor: pointer;
+      position: absolute;
+      right: 50%;
+      margin-right: 3.656em;
+      .prev-button {
+        
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+    .next-page {
+      opacity: 0.5;
+      cursor: pointer;
+      position: absolute;
+      left: 50%;
+      margin-left: 3.656em;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

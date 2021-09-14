@@ -1,0 +1,56 @@
+// import React from "react";
+
+// const SignUpForm = ({ handleChange, values, errors }) => {
+//   return (
+//     <div className="form-container">
+//       <form
+//         className="sign-in-form"
+//         id="sign-in-form"
+//         method="get"
+//         // onSubmit={handleFirstName}
+//       >
+//         <div className="form-inputs">
+//           <label htmlFor="first-name" className="form-label">
+//             სახელი*
+//           </label>
+//           <input
+//             type="text"
+//             name="firstName"
+//             className="firstName-input"
+//             onChange={handleChange}
+//             value={values.firstName}
+//           />
+//           {errors.firstNameError && <p>{errors.firstNameError}</p>}
+//         </div>
+//         <div className="form-inputs">
+//           <label htmlFor="last-name" className="form-label">
+//             გვარი*
+//           </label>
+//           <input
+//             type="text"
+//             name="lastName"
+//             className="lastName-input"
+//             value={values.lastName}
+//             onChange={handleChange}
+//           />
+//           {errors.lastNameError && <p>{errors.lastNameError}</p>}
+//         </div>
+//         <div className="form-inputs">
+//           <label htmlFor="email" className="form-label">
+//             email*
+//           </label>
+//           <input
+//             type="email"
+//             name="email"
+//             className="email-input"
+//             value={values.email}
+//             onChange={handleChange}
+//           />
+//           {errors.emailError && <p>{errors.emailError}</p>}
+//         </div>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default SignUpForm;
