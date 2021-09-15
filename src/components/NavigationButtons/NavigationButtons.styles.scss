@@ -9,20 +9,30 @@
       right: 50%;
       margin-right: 3.656em;
       .prev-button {
-        
         &:hover {
           transform: scale(1.2);
         }
       }
     }
-    .next-page {
+    .locked-button {
+      position: absolute;
+      left: 50%;
+      margin-left: 3.656em;
       opacity: 0.5;
+      transform: none;
+      pointer-events: none;
+      cursor: none;
+    }
+    .next-page {
       cursor: pointer;
       position: absolute;
       left: 50%;
       margin-left: 3.656em;
-      &:hover {
-        transform: scale(1.2);
+
+      .next-button {
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     }
   }
