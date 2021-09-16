@@ -6,6 +6,14 @@ const initialState = {
     validLastName: "",
     validEmail: "",
   },
+  userInformation: {
+    userHadCovid: "",
+    antiBodyTested: "",
+    testDate: null,
+    numberOfAntibodies: "",
+    whenUserHadCovid: null,
+    vaccinated: "",
+  },
 
   validUser: false,
 };
@@ -18,7 +26,7 @@ export const userDataSlice = createSlice({
       state.validUser = action.payload;
     },
     setValidationData: (state, action) => {
-      if (action.payload === false ) {
+      if (action.payload === false) {
         state.validatedData.validFirstName = "";
         state.validatedData.validLastName = "";
         state.validatedData.validEmail = "";
@@ -28,12 +36,59 @@ export const userDataSlice = createSlice({
         state.validatedData.validEmail = action.payload.email;
       }
     },
+    setUserInformation: (state, action) => {
+      switch (action.payload.name) {
+        case "userHadCovid":
+          state.userInformation.userHadCovid = action.payload.data;
+          break;
+        case "antiBodyTested":
+          state.userInformation.antiBodyTested = action.payload.data;
+          break;
+        case "testDate":
+          state.userInformation.testDate = action.payload.data;
+          break;
+        case "numberOfAntibodies":
+          state.userInformation.numberOfAntibodies = action.payload.data;
+          break;
+        case "whenUserHadCovid":
+          state.userInformation.whenUserHadCovid = action.payload.data;
+          break;
+        case "vaccinated":
+          state.userInformation.vaccinated = action.payload.data;
+          break;
+        default:
+          console.log("unexpected data");
+      }
+    },
+    resetUserInfo: (state, action) => {
+      console.log(action)
+      console.log("hee")
+      switch (action.payload) {
+        case "userHadCovid":
+          state.userInformation.antiBodyTested = "";
+          state.userInformation.testDate = null;
+          state.userInformation.numberOfAntibodies = "";
+          state.userInformation.whenUserHadCovid = null;
+          break;
+          case "antiBodyTested":
+            
+            state.userInformation.testDate = null;
+            state.userInformation.numberOfAntibodies = "";
+            state.userInformation.whenUserHadCovid = null;
+            break;
+
+        default:
+          console.log("unexpected data");
+      }
+    },
   },
 });
 
-export const { setIsValidUser, setValidationData } = userDataSlice.actions;
+export const { setIsValidUser, setValidationData, setUserInformation , resetUserInfo} =
+  userDataSlice.actions;
 
 export const getIsUserValid = (state) => state.userData.validUser;
 export const getValidationData = (state) => state.userData.validatedData;
+export const getUserInformation = (state) => state.userData.userInformation;
 
 export default userDataSlice.reducer;

@@ -1,13 +1,38 @@
-import React from 'react'
-import './SeconPage.styles.scss'
+import React from "react";
+import "./SeconPage.styles.scss";
 
+import { ReactComponent as SecondPageLogo } from "../../images/secondPageLogo.svg";
+import {
+  getUserInformation,
+ 
+} from "../../redux/userDataSlice";
+import {  useSelector } from "react-redux";
+
+import FirstQuestion from "./SecondPageComponents/FirstQuestion";
+import SecondQuestion from "./SecondPageComponents/SecondQuestion";
+import ThirdQuestion from "./SecondPageComponents/ThirdQuestion";
+import FourthQuestion from "./SecondPageComponents/FourthQuestion";
 
 const SecondPage = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+  const userInformation = useSelector(getUserInformation);
 
-export default SecondPage
+  console.log(userInformation);
+  return (
+    <div className="second-page">
+      <div className="second-page-components">
+        <FirstQuestion />
+        {userInformation.userHadCovid === "yes" ? <SecondQuestion /> : null}
+        {userInformation.antiBodyTested === "yes" ? <ThirdQuestion /> : null}
+        {userInformation.antiBodyTested === "no" ? <FourthQuestion /> : null}
+      </div>
+      
+     
+      
+      <div className="logo-container">
+      <SecondPageLogo className="second-page-logo" />
+      </div>
+    </div>
+  );
+};
+
+export default SecondPage;

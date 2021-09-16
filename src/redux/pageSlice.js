@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   startingPage: false,
-  activePage: 1,
+  activePage: 3,
 };
 
 export const pageSlice = createSlice({
@@ -20,7 +20,7 @@ export const pageSlice = createSlice({
       state.activePage += 1;
     },
     renderPrevPage: (state) => {
-      state.activePage  -= 1;
+      state.activePage -= 1;
     },
   },
 });

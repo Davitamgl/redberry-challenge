@@ -1,0 +1,163 @@
+.second-page {
+  height: 100%;
+  position: relative;
+  .logo-container {
+    position: absolute;
+    height: 892px;
+    width: 949px;
+    left: 851px;
+    top: -70px;
+
+   
+  }
+  .second-page-components {
+    margin: 0em 12.5em;
+    max-width: 596px;
+    margin: 0em 12.5em;
+  }
+}
+.react-datepicker-wrapper {
+  height: 100px;
+  .react-datepicker__input-container {
+    height: 100%;
+    .react-datepicker-ignore-onclickoutside {
+      height: 100%;
+      color: #232323;
+
+      height: 50px;
+      padding: 0rem 1.25em;
+      line-height: 1.375em;
+
+      background-color: #c4c4c400;
+
+      width: 513px;
+    }
+  }
+}
+.first-question-content,
+.second-question-content {
+  display: flex;
+  flex-direction: column;
+
+  .inputs-container {
+    .radio-label-wrapper {
+      margin-bottom: 1.25em;
+      display: flex;
+
+      align-items: end;
+      padding: 0em 1.375em;
+
+      .first-question-radios {
+        background-color: #232323;
+        height: 1.875em;
+        width: 1.875em;
+      }
+      .input-label {
+        line-height: 1.509rem;
+        color: #000000;
+        padding-left: 1.188em;
+        font-weight: 700;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+.second-question-content {
+  margin-top: 1.625em;
+}
+.content-hidden {
+  display: none;
+}
+
+.third-question-content {
+  margin-top: 1.625em;
+  .inputs-container {
+    margin-left: 1.375em;
+    .date-input-container {
+      margin-bottom: 1.563em;
+      .date-input {
+        color: #232323;
+        font-weight: 400;
+        font-size: 1.125rem;
+        height: 50px;
+        padding: 0rem 1.25em;
+
+        line-height: 1.375em;
+        letter-spacing: 0em;
+        background-color: #c4c4c400;
+        border: 0.8px solid #232323;
+        width: 513px; //26.71%;
+      }
+    }
+
+    .number-input-container {
+      .number-input {
+        //  color: rgb(105, 105, 105);
+        color: #232323;
+        font-weight: 400;
+        font-size: 1.125rem;
+        height: 50px;
+        padding: 0rem 1.25em;
+
+        line-height: 1.375em;
+        letter-spacing: 0em;
+        background-color: #c4c4c400;
+        border: 0.8px solid #232323;
+        width: 513px; //26.71%;
+        outline: none;
+      }
+    }
+  }
+}
+.question-texts {
+  color: #232323;
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: 0.875em;
+}
+
+.material-input {
+  width: 513px;
+  height: 50px;
+  .MuiInputBase-root {
+    .MuiInputBase-input {
+      // color: rgb(105, 105, 105);
+      color: #232323;
+      font-weight: 400;
+      font-size: 1.125rem;
+      height: 50px;
+      padding: 0rem 1.25em;
+      line-height: 1.375em;
+      letter-spacing: 0em;
+      background-color: #c4c4c400;
+      border: 0.8px solid #232323;
+      width: 513px;
+    }
+  }
+}
+
+// ::-webkit-datetime-edit {
+//   padding: 1em;
+// }
+// ::-webkit-datetime-edit-fields-wrapper {
+//   background: silver;
+// }
+// ::-webkit-datetime-edit-text {
+//   color: red;
+//   padding: 0 0.3em;
+// }
+// ::-webkit-datetime-edit-month-field {
+//   color: blue;
+// }
+// ::-webkit-datetime-edit-day-field {
+//   color: green;
+// }
+// ::-webkit-datetime-edit-year-field {
+//   color: purple;
+// }
+// ::-webkit-inner-spin-button {
+//   display: none;
+// }
+// ::-webkit-calendar-picker-indicator {
+//   background: orange;
+// }

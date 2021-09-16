@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useSelector } from "react-redux";
-import {  startingPageSelector } from "./redux/pageSlice";
+import { startingPageSelector } from "./redux/pageSlice";
 import StartingPage from "./components/StartingPage/StartingPage.component";
 import TestRender from "./components/TestRender/TestRender.component";
 
@@ -18,8 +18,10 @@ const App = () => {
         <StartingPage />
       ) : (
         <div className="component-wrapper">
-          <RedberryHeader />,
+          <RedberryHeader />
+          <main className="main">
           <TestRender />
+          </main>
           <NavigationButtons />
         </div>
       )}

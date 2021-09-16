@@ -16,12 +16,11 @@ import "./SignUpForm.styles.scss";
 const LatestSignUpForm = () => {
   const dispatch = useDispatch();
   const [errors, setErrors] = useState({});
-  console.log(errors);
 
   const validationData = useSelector(getValidationData);
-  console.log(validationData);
-  const isUserValid = useSelector(getIsUserValid);
-  const currentPage = useSelector(getCurrentPage);
+
+  // const isUserValid = useSelector(getIsUserValid);
+  // const currentPage = useSelector(getCurrentPage);
 
   const [values, setValues] = useState({
     firstName: "",
@@ -30,7 +29,6 @@ const LatestSignUpForm = () => {
   });
 
   const handleChange = (e) => {
-    console.log(e);
     setValues({
       ...values,
       [e.target.name]: e.target.value,
@@ -60,7 +58,6 @@ const LatestSignUpForm = () => {
       Object.values(values).every((x) => x.length >= 3) &&
       Object.values(errors).every((x) => x === "")
     ) {
-      console.log("yess");
       dispatch(setIsValidUser(true), dispatch(setValidationData(values)));
     } else {
       dispatch(setIsValidUser(false), dispatch(setValidationData(false)));
@@ -82,9 +79,13 @@ const LatestSignUpForm = () => {
               onChange={handleChange}
               value={values.firstName}
             />
-            {errors.firstNameError && (
-              <p className="error-message">{errors.firstNameError}</p>
-            )}
+            <div
+              className={
+                errors.firstNameError ? "error-message" : "error-message-hidden"
+              }
+            >
+              {errors.firstNameError}
+            </div>
           </div>
           <div className="form-inputs">
             <label htmlFor="last-name" className="form-label">
@@ -97,9 +98,13 @@ const LatestSignUpForm = () => {
               value={values.lastName}
               onChange={handleChange}
             />
-            {errors.lastNameError && (
-              <p className="error-message">{errors.lastNameError}</p>
-            )}
+            <div
+              className={
+                errors.lastNameError ? "error-message" : "error-message-hidden"
+              }
+            >
+              {errors.lastNameError}
+            </div>
           </div>
           <div className="form-inputs">
             <label htmlFor="email" className="form-label">
@@ -112,9 +117,13 @@ const LatestSignUpForm = () => {
               value={values.email}
               onChange={handleChange}
             />
-            {errors.emailError && (
-              <p className="error-message">{errors.emailError}</p>
-            )}
+            <div
+              className={
+                errors.emailError ? "error-message" : "error-message-hidden"
+              }
+            >
+              {errors.emailError}
+            </div>
           </div>
           <div className="note-text">
             *-ით მონიშნული ველების შევსება სავალდებულოა

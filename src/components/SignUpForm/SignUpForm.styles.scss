@@ -3,10 +3,12 @@
 
   .form-container {
     width: 100%;
-    flex-direction: column;
+
+    max-width: 600px;
     // padding-top: 2.5em;
     .sign-up-form {
       height: 100%;
+
       .form-inputs {
         display: flex;
         flex-direction: column;
@@ -15,8 +17,7 @@
           font-size: 1.375rem;
           font-weight: 700;
 
-          margin-top: 2.5em;
-          margin-bottom: 0.7em;
+          padding-bottom: 0.5em;
         }
         .firstName-input,
         .lastName-input,
@@ -24,17 +25,30 @@
           color: #232323;
           font-weight: 400;
           font-size: 1.125rem;
-          height: 3em;
+          height: 50px;
           padding: 0rem 1.25rem;
+          // margin-bottom: 2em;
           line-height: 1.375em;
           letter-spacing: 0em;
           background-color: #c4c4c400;
           border: 0.8px solid #232323;
           width: 513px; //26.71%;
+          outline: none;
         }
         .error-message {
+          padding-left: 10px;
+          padding-top: 5px;
+          margin-bottom: 1.375em;
+          height: 1.188em;
           font-size: 1rem;
           color: #f15524;
+        }
+        .error-message-hidden {
+          padding-left: 10px;
+          padding-top: 5px;
+          margin-bottom: 1.375em;
+          height: 1.188em;
+          visibility: none;
         }
       }
       .note-text {

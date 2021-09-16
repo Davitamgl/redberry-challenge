@@ -9,7 +9,7 @@ import {
 import { ReactComponent as NextPageButton } from "../../images/nextPage.svg";
 import { ReactComponent as PrevPageButton } from "../../images/prevPage.svg";
 
-import { getIsUserValid } from "../../redux/userDataSlice";
+import { getIsUserValid, getUserInformation } from "../../redux/userDataSlice";
 
 import { useSelector, useDispatch } from "react-redux";
 
@@ -17,9 +17,24 @@ import "./NavigationButtons.styles.scss";
 
 const NavigationButtons = () => {
   const dispatch = useDispatch();
-
+  const userInformation = useSelector(getUserInformation);
   const currentPage = useSelector(getCurrentPage);
   const validUser = useSelector(getIsUserValid);
+
+  const handleNextPage = () => {
+    if (currentPage === 1 && validUser) {
+      return "next-page";
+    } else if (
+      currentPage === 2 &&
+      (userInformation.whenUserHadCovid ||
+        (userInformation.testDate && 
+          userInformation.numberOfAntibodies))
+    ) {
+      return "next-page";
+    } else {
+      return "locked-button";
+    }
+  };
 
   return (
     <div className="page-buttons-container">
@@ -30,7 +45,11 @@ const NavigationButtons = () => {
           </div>
         ) : null}
         <div
-          className={validUser ? "next-page" : "locked-button"}
+          className={
+            handleNextPage()
+            // validUser ? "next-page" :
+            // ? currentPage === 2 && (userInformation.whenUserHadCovid || userInformation.testDate &&numberOfAntibodies) :
+          }
           onClick={() => dispatch(renderNextPage())}
         >
           <NextPageButton className="next-button" />
@@ -39,5 +58,5 @@ const NavigationButtons = () => {
     </div>
   );
 };
-
+//"locked-button"
 export default NavigationButtons;
