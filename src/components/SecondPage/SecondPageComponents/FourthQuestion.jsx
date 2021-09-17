@@ -17,9 +17,9 @@ const FourthQuestion = () => {
   return (
     <div
       className={
-        userInformation.antiBodyTested === "no"
-          ? "third-question-content"
-          : "content-hidden"
+      
+           "third-question-content"
+          
       }
     >
       <p className="question-texts">

@@ -15,7 +15,9 @@ const initialState = {
     vaccinated: "",
     vaccinationPhase: "",
     whatUserIsWaitingFor: "",
-    userClickedOnLink: ""
+    userClickedOnLink: "",
+    meetingEvery: "",
+    workFromOfficePerWeek: "",
   },
 
   validUser: false,
@@ -65,12 +67,17 @@ export const userDataSlice = createSlice({
         case "whatUserIsWaitingFor":
           state.userInformation.whatUserIsWaitingFor = action.payload.data;
           break;
-          case "userClickedOnLink":
-            state.userInformation.userClickedOnLink = action.payload.data;
-            break;
-          
+        case "userClickedOnLink":
+          state.userInformation.userClickedOnLink = action.payload.data;
+          break;
+        case "meetingEvery":
+          state.userInformation.meetingEvery = action.payload.data;
+          break;
+        case "workFromOfficePerWeek":
+          state.userInformation.workFromOfficePerWeek = action.payload.data;
+          break;
+
         default:
-          console.log("unexpected data");
       }
     },
     resetUserInfo: (state, action) => {
@@ -89,7 +96,6 @@ export const userDataSlice = createSlice({
           state.userInformation.whenUserHadCovid = null;
           break;
         case "vaccinated":
-          
           state.userInformation.vaccinationPhase = "";
           state.userInformation.whatUserIsWaitingFor = "";
           break;

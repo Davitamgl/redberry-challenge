@@ -3,7 +3,7 @@ import latestValidation from "../ValidateUser/ValidateUser";
 
 import {
   setIsValidUser,
-  getIsUserValid,
+  
   setValidationData,
   getValidationData,
 } from "../../redux/userDataSlice";
@@ -68,7 +68,7 @@ const LatestSignUpForm = () => {
     <div className="firstpage-elements-container">
       <div className="form-container ">
         <form className="sign-up-form" id="sign-in-form" method="get">
-          <div className="form-inputs">
+          <div className="form-input-one">
             <label htmlFor="first-name" className="form-label">
               სახელი*
             </label>
@@ -87,7 +87,7 @@ const LatestSignUpForm = () => {
               {errors.firstNameError}
             </div>
           </div>
-          <div className="form-inputs">
+          <div className="form-input-two">
             <label htmlFor="last-name" className="form-label">
               გვარი*
             </label>
@@ -106,7 +106,7 @@ const LatestSignUpForm = () => {
               {errors.lastNameError}
             </div>
           </div>
-          <div className="form-inputs">
+          <div className="form-input-three">
             <label htmlFor="email" className="form-label">
               მეილი*
             </label>

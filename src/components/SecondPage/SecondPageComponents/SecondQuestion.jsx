@@ -20,7 +20,7 @@ const SecondQuestion = () => {
   return (
     <div
       className={
-        // userInformation.userHadCovid === "yes"
+        // userInformation.userHadCovid === "კი"
         //   ?
         "second-question-content"
         // :
@@ -34,10 +34,10 @@ const SecondQuestion = () => {
             type="radio"
             name="antiBodyTested"
             // checked={true}
-            value="yes"
+            value="კი"
             className="first-question-radios"
             onChange={handleChange}
-            checked={userInformation.antiBodyTested === "yes"}
+            checked={userInformation.antiBodyTested === "კი"}
           ></input>
           <label className="input-label">კი</label> 
         </div>
@@ -47,8 +47,8 @@ const SecondQuestion = () => {
             type="radio"
             name="antiBodyTested"
             onChange={handleChange}
-            checked={userInformation.antiBodyTested === "no"}
-            value="no"
+            checked={userInformation.antiBodyTested === "არა"}
+            value="არა"
             className="first-question-radios"
           />
           <label className="input-label">არა</label> 

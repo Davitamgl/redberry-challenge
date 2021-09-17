@@ -2,11 +2,8 @@ import React from "react";
 import "./SeconPage.styles.scss";
 
 import { ReactComponent as SecondPageLogo } from "../../images/secondPageLogo.svg";
-import {
-  getUserInformation,
- 
-} from "../../redux/userDataSlice";
-import {  useSelector } from "react-redux";
+import { getUserInformation } from "../../redux/userDataSlice";
+import { useSelector } from "react-redux";
 
 import FirstQuestion from "./SecondPageComponents/FirstQuestion";
 import SecondQuestion from "./SecondPageComponents/SecondQuestion";
@@ -21,15 +18,13 @@ const SecondPage = () => {
     <div className="second-page">
       <div className="second-page-components">
         <FirstQuestion />
-        {userInformation.userHadCovid === "yes" ? <SecondQuestion /> : null}
-        {userInformation.antiBodyTested === "yes" ? <ThirdQuestion /> : null}
-        {userInformation.antiBodyTested === "no" ? <FourthQuestion /> : null}
+        {userInformation.userHadCovid === "კი" ? <SecondQuestion /> : null}
+        {userInformation.antiBodyTested === "კი" ? <ThirdQuestion /> : null}
+        {userInformation.antiBodyTested === "არა" ? <FourthQuestion /> : null}
       </div>
-      
-     
-      
+
       <div className="logo-container">
-      <SecondPageLogo className="second-page-logo" />
+        <SecondPageLogo className="second-page-logo" />
       </div>
     </div>
   );

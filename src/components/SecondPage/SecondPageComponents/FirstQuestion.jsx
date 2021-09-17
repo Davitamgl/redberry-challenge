@@ -24,8 +24,8 @@ const FirstQuestion = () => {
           <input
             type="radio"
             name="userHadCovid"
-            checked={userInformation.userHadCovid === "yes"}
-            value="yes"
+            checked={userInformation.userHadCovid === "კი"}
+            value="კი"
             className="first-question-radios"
             onChange={handleChange}
           ></input>
@@ -36,8 +36,8 @@ const FirstQuestion = () => {
           <input
             type="radio"
             name="userHadCovid"
-            checked={userInformation.userHadCovid === "no"}
-            value="no"
+            checked={userInformation.userHadCovid === "არა"}
+            value="არა"
             className="first-question-radios"
             onChange={handleChange}
           />
@@ -47,8 +47,8 @@ const FirstQuestion = () => {
           <input
             type="radio"
             name="userHadCovid"
-            checked={userInformation.userHadCovid === "currently has"}
-            value="currently has"
+            checked={userInformation.userHadCovid === "ახლა მაქვს"}
+            value="ახლა მაქვს"
             className="first-question-radios"
             onChange={handleChange}
           />

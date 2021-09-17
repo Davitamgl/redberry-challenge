@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ReactComponent as FirstPageLogo } from "../../images/firstPageLogo.svg";
 
 import "./firstPage.styles.scss";

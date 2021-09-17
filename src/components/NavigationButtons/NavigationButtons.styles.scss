@@ -1,5 +1,6 @@
 .page-buttons-container {
   height: 10%;
+  flex-shrink: 0;
 
   .page-buttons {
     position: relative;
@@ -22,6 +23,9 @@
       transform: none;
       pointer-events: none;
       cursor: none;
+    }
+    .no-button{
+      display: none;
     }
     .next-page {
       cursor: pointer;

@@ -1,12 +1,13 @@
 .third-page {
   height: 100%;
   position: relative;
+  overflow: hidden;
   .logo-container {
     position: absolute;
     height: 892px;
     width: 949px;
     left: 851px;
-    top: -70px;
+    top: 60px;
   }
   .third-page-components {
     margin: 0em 12.5em;
@@ -73,7 +74,8 @@ a:hover {
 //   outline: none;
 // }
 
-.link-text, .additional-info {
+.link-text,
+.additional-info {
   color: #232323;
   font-size: 1.25rem;
   font-weight: 400;

@@ -1,7 +1,9 @@
 .header-container {
+  flex-shrink: 0;
+
   width: 100%;
-  height: 17.2%;
-  padding: 5.563em 12.5em 0em 12.5em;
+  height: 13%;
+  padding: 5em 12.5em 0em 12.5em;
   .redberry-header {
     display: flex;
     justify-content: space-between;

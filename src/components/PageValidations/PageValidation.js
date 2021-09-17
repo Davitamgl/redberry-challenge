@@ -10,10 +10,12 @@ const PageValidation = () => {
   if (currentPage === 1 && validUser) {
     return "next-page";
   } else if (
-    (currentPage === 2 && userInformation.userHadCovid) ||
+    (currentPage === 2 && userInformation.userHadCovid === "არა") ||
+    userInformation.userHadCovid === "ახლა მაქვს" ||
     (currentPage === 2 &&
       (userInformation.whenUserHadCovid ||
         (userInformation.testDate && userInformation.numberOfAntibodies)))
+    // (currentPage === 2 && userInformation.userHadCovid ) ||
   ) {
     return "next-page";
   } else if (
@@ -21,7 +23,7 @@ const PageValidation = () => {
     (userInformation.whatUserIsWaitingFor || userInformation.vaccinationPhase)
   ) {
     return "next-page";
-  }
+  } else if (currentPage === 4) return "no-button";
   //  else if ( currentPage === 3 &&
   //   (userInformation.whenUserHadCovid ||
   //     (userInformation.testDate && userInformation.numberOfAntibodies))) {

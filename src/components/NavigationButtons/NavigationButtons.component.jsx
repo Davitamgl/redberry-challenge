@@ -27,6 +27,7 @@ const NavigationButtons = () => {
             <PrevPageButton className="prev-button" />
           </div>
         ) : null}
+
         <div
           className={PageValidation()}
           onClick={() => dispatch(renderNextPage())}

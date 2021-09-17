@@ -1,12 +1,13 @@
 .second-page {
   height: 100%;
   position: relative;
+  overflow: hidden;
   .logo-container {
     position: absolute;
     height: 892px;
     width: 949px;
     left: 851px;
-    top: -70px;
+    top: 0;
   }
   .second-page-components {
     margin: 0em 12.5em;
@@ -36,6 +37,7 @@
 .second-question-content {
   display: flex;
   flex-direction: column;
+  margin-top: 2.125em;
 
   .inputs-container {
     .radio-label-wrapper {
@@ -112,6 +114,7 @@
   font-size: 1.375rem;
   font-weight: 700;
   margin-bottom: 0.875em;
+  line-height: 1.688em;
 }
 
 .material-input {

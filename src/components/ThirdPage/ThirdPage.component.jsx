@@ -20,8 +20,7 @@ const ThirdPage = () => {
 
   const [data, setData] = useState("");
 
-  console.log(userInformation);
-  console.log(data);
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
