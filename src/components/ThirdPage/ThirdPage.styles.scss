@@ -1,18 +1,85 @@
 .third-page {
-    height: 100%;
-    position: relative;
-    .logo-container {
-      position: absolute;
-      height: 892px;
-      width: 949px;
-      left: 851px;
-      top: -70px;
-  
-     
-    }
-    .third-page-components {
-      margin: 0em 12.5em;
-      max-width: 596px;
-      margin: 0em 12.5em;
+  height: 100%;
+  position: relative;
+  .logo-container {
+    position: absolute;
+    height: 892px;
+    width: 949px;
+    left: 851px;
+    top: -70px;
+  }
+  .third-page-components {
+    margin: 0em 12.5em;
+    max-width: 700px;
+    margin: 0em 12.5em;
+
+    .first-question-content {
+      .radio-label-wrapperr {
+        display: flex;
+        flex-direction: column;
+        // justify-content: flex-start;
+      }
     }
   }
+  .link-container {
+    max-width: 337px;
+    margin-top: 2.438em;
+    margin-left: 3.938em;
+  }
+}
+.inputs-container {
+  margin-left: 1.375em;
+}
+.input-label {
+  line-height: 1.509rem;
+  color: #000000;
+  padding-left: 0.594em;
+  // padding: ;
+  font-weight: 400;
+  font-size: 1.25rem;
+  vertical-align: middle;
+}
+.link-and-text-container {
+  width: 500px;
+}
+
+a {
+  font-size: 1.25rem;
+  color: #1289ae;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 1.509em;
+}
+.MuiButtonBase-root {
+  padding: 0;
+}
+// .PrivateRadioButtonIcon-root-5{
+//  font-size: 50px;
+//  width: 50px;
+//  height: 50px;
+// }
+// a:visited {
+//   color: #c96d3b;
+// }
+.MuiSvgIcon-root {
+  font-size: 1.8rem !important;
+}
+
+a:hover {
+  color: #c96d3b;
+}
+// a[tabindex]:focus {
+//   color: blue;
+//   outline: none;
+// }
+
+.link-text, .additional-info {
+  color: #232323;
+  font-size: 1.25rem;
+  font-weight: 400;
+
+  line-height: 1.509em;
+}
+.additional-info {
+  margin-bottom: 1.813em;
+}

@@ -1,36 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ThirdPage.styles.scss";
+
 import { ReactComponent as ThirdPageLogo } from "../../images/thirdPageLogo.svg";
-import { Radio } from "@material-ui/core";
+import {
+  getUserInformation,
+  setUserInformation,
+  resetUserInfo
+} from "../../redux/userDataSlice";
+import { useDispatch, useSelector } from "react-redux";
+
+import Question21 from "./ThirdPageComponents/Question21.component";
+import Question22 from "./ThirdPageComponents/Question22.component";
+import Question23 from "./ThirdPageComponents/Question23.component";
+import AdditionalLink from "./ThirdPageComponents/AdditionalLink.component";
 
 const ThirdPage = () => {
+  const dispatch = useDispatch();
+  const userInformation = useSelector(getUserInformation);
+
+  const [data, setData] = useState("");
+
+  console.log(userInformation);
+  console.log(data);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    console.log(name + value);
+    setData(value);
+    dispatch(setUserInformation({ name: name, data: value }));
+    if(name === "vaccinated"){
+    dispatch(resetUserInfo("vaccinated"));
+    }
+  };
+
   return (
     <div className="third-page">
       <div className="third-page-components">
-        <div className="first-question-content">
-          <p className="question-texts">უკვე აცრილი ხარ?*</p>
-          <div className="inputs-container">
-            <div className="radio-label-wrapper">
-              <div className="radio-label-wrapper">
-                <Radio />
-                <label className="input-label">კი</label> 
-              </div>
-              <div className="radio-label-wrapper">
-                <Radio />
-                <label className="input-label">არა</label> 
-              </div>
-
-              <input
-                type="radio"
-                name="userHadCovid"
-                // checked={userInformation.userHadCovid === "yes"}
-                value="yes"
-                className="first-question-radios"
-                // onChange={handleChange}
-              ></input>
-            </div>
-          </div>
-        </div>
+        <Question21
+          handleChange={handleChange}
+          checkedValue={userInformation.vaccinated}
+        />
+        {userInformation.vaccinated === "yes" ? (
+          <Question22
+            handleChange={handleChange}
+            checkedValue={userInformation.vaccinationPhase}
+          />
+        ) : null}
+        {userInformation.vaccinated === "no" ? (
+          <Question23
+            handleChange={handleChange}
+            checkedValue={userInformation.whatUserIsWaitingFor}
+          />
+        ) : null}
+        <AdditionalLink />
       </div>
 
       <div className="logo-container">

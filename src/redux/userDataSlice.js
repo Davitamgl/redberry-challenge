@@ -13,6 +13,9 @@ const initialState = {
     numberOfAntibodies: "",
     whenUserHadCovid: null,
     vaccinated: "",
+    vaccinationPhase: "",
+    whatUserIsWaitingFor: "",
+    userClickedOnLink: ""
   },
 
   validUser: false,
@@ -56,13 +59,23 @@ export const userDataSlice = createSlice({
         case "vaccinated":
           state.userInformation.vaccinated = action.payload.data;
           break;
+        case "vaccinationPhase":
+          state.userInformation.vaccinationPhase = action.payload.data;
+          break;
+        case "whatUserIsWaitingFor":
+          state.userInformation.whatUserIsWaitingFor = action.payload.data;
+          break;
+          case "userClickedOnLink":
+            state.userInformation.userClickedOnLink = action.payload.data;
+            break;
+          
         default:
           console.log("unexpected data");
       }
     },
     resetUserInfo: (state, action) => {
-      console.log(action)
-      console.log("hee")
+      console.log(action);
+      console.log("hee");
       switch (action.payload) {
         case "userHadCovid":
           state.userInformation.antiBodyTested = "";
@@ -70,12 +83,16 @@ export const userDataSlice = createSlice({
           state.userInformation.numberOfAntibodies = "";
           state.userInformation.whenUserHadCovid = null;
           break;
-          case "antiBodyTested":
-            
-            state.userInformation.testDate = null;
-            state.userInformation.numberOfAntibodies = "";
-            state.userInformation.whenUserHadCovid = null;
-            break;
+        case "antiBodyTested":
+          state.userInformation.testDate = null;
+          state.userInformation.numberOfAntibodies = "";
+          state.userInformation.whenUserHadCovid = null;
+          break;
+        case "vaccinated":
+          
+          state.userInformation.vaccinationPhase = "";
+          state.userInformation.whatUserIsWaitingFor = "";
+          break;
 
         default:
           console.log("unexpected data");
@@ -84,8 +101,12 @@ export const userDataSlice = createSlice({
   },
 });
 
-export const { setIsValidUser, setValidationData, setUserInformation , resetUserInfo} =
-  userDataSlice.actions;
+export const {
+  setIsValidUser,
+  setValidationData,
+  setUserInformation,
+  resetUserInfo,
+} = userDataSlice.actions;
 
 export const getIsUserValid = (state) => state.userData.validUser;
 export const getValidationData = (state) => state.userData.validatedData;
