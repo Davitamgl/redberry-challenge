@@ -18,6 +18,9 @@ const initialState = {
     userClickedOnLink: "",
     meetingEvery: "",
     workFromOfficePerWeek: "",
+    userThoughtsAboutMeetings: "",
+    userThoughtsAboutEnviroment: "",
+    submitButtonClicked: "",
   },
 
   validUser: false,
@@ -76,13 +79,24 @@ export const userDataSlice = createSlice({
         case "workFromOfficePerWeek":
           state.userInformation.workFromOfficePerWeek = action.payload.data;
           break;
+        case "userThoughtsAboutMeetings":
+          state.userInformation.userThoughtsAboutMeetings = action.payload.data;
+          break;
 
-        default:
+        case "userThoughtsAboutEnviroment":
+          state.userInformation.userThoughtsAboutEnviroment =
+            action.payload.data;
+          break;
+
+        case "submitButtonClicked":
+          state.userInformation.submitButtonClicked = action.payload.data;
+          break;
+
+        default: console.log("unexpected data");
       }
     },
     resetUserInfo: (state, action) => {
-      console.log(action);
-      console.log("hee");
+  
       switch (action.payload) {
         case "userHadCovid":
           state.userInformation.antiBodyTested = "";

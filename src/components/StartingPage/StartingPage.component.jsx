@@ -1,17 +1,14 @@
 import React from "react";
 
 import { useDispatch } from "react-redux";
-import {endStartPage} from "../../redux/pageSlice";
+import { endStartPage } from "../../redux/pageSlice";
 
-import { ReactComponent as Redberry } from "../../images/Vector1.svg";
+import { ReactComponent as RedberryAnimation } from "../../images/Vector1.svg";
 
 import "./StartingPage.styles.scss";
 
 const StartingPage = () => {
-
   const dispatch = useDispatch();
-
-
 
   const handleClick = () => {
     dispatch(endStartPage());
@@ -19,10 +16,11 @@ const StartingPage = () => {
 
   return (
     <div className="starting-page">
-      <Redberry className="redberry-svg" />
-      <div className="starting-text" onClick={handleClick}>
-        <span>კითხვარის</span>
-        <span>დაწყება</span>
+      <div className="animation-container">
+        <RedberryAnimation className="redberry-svg" />
+      </div>
+      <div className="starting-text-container" onClick={handleClick}>
+        <div className="starting-text">კითხვარის დაწყება</div>
       </div>
     </div>
   );

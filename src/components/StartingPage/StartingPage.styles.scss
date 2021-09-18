@@ -1,65 +1,92 @@
 .starting-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  // flex-wrap: wrap;
   height: 100%;
   background-color: #eaeaea;
-
-  .redberry-svg {
-    margin-bottom: 3em;
-    animation-name: starting-animation;
-    animation-duration: 1s;
-  }
-  @keyframes starting-animation {
-    0% {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      width: 4212.32px;
-      height: 4211.68px;
-    }
-    99% {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-
-      transform: translate(-50%, -50%);
-      position: absolute;
-    }
-
-    100% {
-      position: static;
-      width: 100px;
-      height: 100px;
-    }
-  }
-
-  .starting-text {
+  position: relative;
+  .animation-container {
+    width: 100%;
+    height: 100px;
+    top:  21.438em;
+    // padding-top: 11.438em;
+    // margin-bottom: 10em;
+    position: absolute;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
     align-items: center;
+    .redberry-svg {
+      // top:0;
+      // left:0;
+      // margin-left: auto;
+      // margin-right: auto;
+      animation-name: starting-animation;
+      animation-duration: 1s;
+    }
+    @keyframes starting-animation {
+      0% {
+        position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 4212.32px;
+        height: 4211.68px;
+      }
+      99% {
+        position: absolute;
+        // top: 50%;
+        // left: 50%;
 
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 1.5rem;
+        // transform: translate(-50%, -50%);
+        position: absolute;
+      }
 
-    animation-name: starting-text-animation;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
+      100% {
+        position: static;
+        width: 100px;
+        height: 100px;
+      }
+    }
   }
-  @keyframes starting-text-animation {
-    0% {
-      opacity: 0;
-    }
-    99% {
-      opacity: 0;
-    }
+  .starting-text-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
 
-    100% {
-      opacity: 1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+
+    .starting-text {
+   
+      text-align: center;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.5rem;
+
+      animation-name: starting-text-animation;
+      animation-duration: 1.5s;
+      animation-fill-mode: forwards;
+      &:hover{
+      
+        
+        text-shadow: 0.5px 0.5px;
+      }
+    }
+    @keyframes starting-text-animation {
+      0% {
+        opacity: 0;
+      }
+      99% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
   }
 }

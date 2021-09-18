@@ -1,9 +1,12 @@
 .page-buttons-container {
   height: 10%;
   flex-shrink: 0;
+  width: 100%;
 
   .page-buttons {
     position: relative;
+    width: 100%;
+    height: 100%;
     .prev-page {
       cursor: pointer;
       position: absolute;

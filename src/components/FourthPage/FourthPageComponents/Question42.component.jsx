@@ -14,8 +14,8 @@ const Question42 = ({ handleChange, checkedValue }) => {
               name="workFromOfficePerWeek"
               className="material-radio"
               style={{ color: "#232323" }}
-              value="0"
-              checked={checkedValue === "0"}
+              value="zero"
+              checked={checkedValue === "zero"}
               onChange={handleChange}
             />
             <label className="input-label">0</label> 
@@ -24,8 +24,8 @@ const Question42 = ({ handleChange, checkedValue }) => {
             <Radio
               name="workFromOfficePerWeek"
               style={{ color: "#232323" }}
-              value="1"
-              checked={checkedValue === "1"}
+              value="one"
+              checked={checkedValue === "one"}
               className="material-radio"
               onChange={handleChange}
             />
@@ -35,8 +35,8 @@ const Question42 = ({ handleChange, checkedValue }) => {
             <Radio
               name="workFromOfficePerWeek"
               style={{ color: "#232323" }}
-              value="2"
-              checked={checkedValue === "2"}
+              value="two"
+              checked={checkedValue === "two"}
               className="material-radio"
               onChange={handleChange}
             />
@@ -46,8 +46,8 @@ const Question42 = ({ handleChange, checkedValue }) => {
             <Radio
               name="workFromOfficePerWeek"
               style={{ color: "#232323" }}
-              value="3"
-              checked={checkedValue === "3"}
+              value="three"
+              checked={checkedValue === "three"}
               className="material-radio"
               onChange={handleChange}
             />
@@ -57,8 +57,8 @@ const Question42 = ({ handleChange, checkedValue }) => {
             <Radio
               name="workFromOfficePerWeek"
               style={{ color: "#232323" }}
-              value="4"
-              checked={checkedValue === "4"}
+              value="four"
+              checked={checkedValue === "four"}
               className="material-radio"
               onChange={handleChange}
             />
@@ -68,8 +68,8 @@ const Question42 = ({ handleChange, checkedValue }) => {
             <Radio
               name="workFromOfficePerWeek"
               style={{ color: "#232323" }}
-              value="5"
-              checked={checkedValue === "5"}
+              value="five"
+              checked={checkedValue === "five"}
               className="material-radio"
               onChange={handleChange}
             />

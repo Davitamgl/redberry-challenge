@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   startingPage: false,
-  activePage: 4,
+  endingPage: true,
+  activePage: 1,
 };
 
 export const pageSlice = createSlice({
@@ -15,6 +16,10 @@ export const pageSlice = createSlice({
     endStartPage: (state) => {
       state.startingPage = false;
     },
+    startEndingPage: (state) => {
+      console.log("actioon")
+      state.endingPage = true;
+    },
 
     renderNextPage: (state) => {
       state.activePage += 1;
@@ -26,9 +31,15 @@ export const pageSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { endStartPage, renderFirstPage, renderNextPage, renderPrevPage } =
-  pageSlice.actions;
+export const {
+  endStartPage,
+  renderFirstPage,
+  renderNextPage,
+  renderPrevPage,
+  startEndingPage,
+} = pageSlice.actions;
 export const startingPageSelector = (state) => state.page.startingPage;
+export const endingPageSelector = (state) => state.page.endingPage;
 export const getCurrentPage = (state) => state.page.activePage;
 
 export default pageSlice.reducer;

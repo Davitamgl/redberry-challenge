@@ -24,7 +24,7 @@ const ThirdPage = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(name + value);
+   
     setData(value);
     dispatch(setUserInformation({ name: name, data: value }));
     if(name === "vaccinated"){

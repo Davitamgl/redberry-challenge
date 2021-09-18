@@ -13,7 +13,7 @@ import FourthQuestion from "./SecondPageComponents/FourthQuestion";
 const SecondPage = () => {
   const userInformation = useSelector(getUserInformation);
 
-  console.log(userInformation);
+  
   return (
     <div className="second-page">
       <div className="second-page-components">

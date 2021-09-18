@@ -2,23 +2,30 @@ import React from "react";
 import "./FourthPage.styles.scss";
 
 import Question41 from "./FourthPageComponents/Question41.component";
+import Question42 from "./FourthPageComponents/Question42.component";
+import TextAreas from "./FourthPageComponents/TextAreas.component";
+import { ReactComponent as FourthPageLogo } from "../../images/fourthPageLogo.svg";
+
 import {
   getUserInformation,
   setUserInformation,
-  resetUserInfo,
 } from "../../redux/userDataSlice";
+
+import { startEndingPage } from "../../redux/pageSlice";
+
 import { useDispatch, useSelector } from "react-redux";
-import Question42 from "./FourthPageComponents/Question42.component";
 
 const FourthPage = () => {
   const dispatch = useDispatch();
   const userInformation = useSelector(getUserInformation);
-  console.log(userInformation);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(name + value);
-
     dispatch(setUserInformation({ name: name, data: value }));
+if(name === "submitButtonClicked" &&  value === "submit"){
+  
+  dispatch(startEndingPage());
+}
   };
 
   return (
@@ -42,7 +49,45 @@ const FourthPage = () => {
           handleChange={handleChange}
           checkedValue={userInformation.workFromOfficePerWeek}
         />
+        <TextAreas
+          handleChange={handleChange}
+          firstTextareaValue={userInformation.userThoughtsAboutMeetings}
+          secondTextareaValue={userInformation.userThoughtsAboutEnviroment}
+        />
+        <div className="button-and-text-container">
+          <div
+            className={
+              userInformation.submitButtonClicked &&
+              !(
+                userInformation.meetingEvery &&
+                userInformation.workFromOfficePerWeek
+              )
+                ? "note-text"
+                : "note-text-hidden"
+            }
+          >
+            *-ით მონიშნული ველების შევსება სავალდებულოა
+          </div>
+          <div className={"button-container"}>
+            <button
+              className="submit-button"
+              name="submitButtonClicked"
+              value={
+                userInformation.meetingEvery &&
+                userInformation.workFromOfficePerWeek
+                  ? "submit"
+                  : "dontSubmit"
+              }
+              onClick={handleChange}
+            >
+              დასრულება
+            </button>
+          </div>
+        </div>
       </div>
+      <span className="logo-container">
+        <FourthPageLogo className="second-page-logo" />
+      </span>
     </div>
   );
 };

@@ -11,7 +11,7 @@ const PageValidation = () => {
     return "next-page";
   } else if (
     (currentPage === 2 && userInformation.userHadCovid === "არა") ||
-    userInformation.userHadCovid === "ახლა მაქვს" ||
+    (currentPage === 2 && userInformation.userHadCovid === "ახლა მაქვს") ||
     (currentPage === 2 &&
       (userInformation.whenUserHadCovid ||
         (userInformation.testDate && userInformation.numberOfAntibodies)))
