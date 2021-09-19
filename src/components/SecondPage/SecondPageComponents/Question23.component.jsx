@@ -10,7 +10,7 @@ import {
 } from "../../../redux/userDataSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-const ThirdQuestion = () => {
+const Question23 = () => {
   const userInformation = useSelector(getUserInformation);
   const dispatch = useDispatch();
 
@@ -18,17 +18,16 @@ const ThirdQuestion = () => {
     dispatch(
       setUserInformation({ name: "numberOfAntibodies", data: e.target.value })
     );
-    
   };
 
   return (
     <div
       className={
         // userInformation.antiBodyTested === "yes"
-        //   ? 
-          "third-question-content"
-          // : 
-          // "content-hidden"
+        //   ?
+        "third-question-content"
+        // :
+        // "content-hidden"
       }
     >
       <p className="question-texts">
@@ -72,4 +71,4 @@ const ThirdQuestion = () => {
   );
 };
 
-export default ThirdQuestion;
+export default Question23;

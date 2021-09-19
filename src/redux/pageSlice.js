@@ -4,7 +4,7 @@ const initialState = {
   startingPage: false,
   endingPage: false,
   activePage: 
-  3,
+  2,
 };
 
 export const pageSlice = createSlice({

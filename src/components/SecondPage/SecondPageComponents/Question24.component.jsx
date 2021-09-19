@@ -10,33 +10,31 @@ import {
 } from "../../../redux/userDataSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-const FourthQuestion = () => {
+const Question24 = () => {
   const userInformation = useSelector(getUserInformation);
   const dispatch = useDispatch();
 
   return (
-    <div
-      className={
-      
-           "third-question-content"
-          
-      }
-    >
+    <div className={"third-question-content"}>
       <p className="question-texts">
         მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი) როდის გქონდა Covid-19*
       </p>
       <div className="inputs-container">
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
           <DatePicker
-           placeholder="დდ/თთ/წწ"
+            placeholder="დდ/თთ/წწ"
             autoOk
             value={userInformation.whenUserHadCovid}
             variant="inline"
+            name="projext-x"
             className="material-input"
             format="dd MMMM yyyy"
             onChange={(date) =>
               dispatch(
-                setUserInformation({ name: "whenUserHadCovid", data: `${date}` })
+                setUserInformation({
+                  name: "whenUserHadCovid",
+                  data: `${date}`,
+                })
               )
             }
             disableFuture
@@ -50,4 +48,4 @@ const FourthQuestion = () => {
   );
 };
 
-export default FourthQuestion;
+export default Question24;

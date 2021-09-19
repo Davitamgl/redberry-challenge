@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React  from "react";
 import "./ThirdPage.styles.scss";
 
 import { ReactComponent as ThirdPageLogo } from "../../images/thirdPageLogo.svg";

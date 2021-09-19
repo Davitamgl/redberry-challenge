@@ -1,21 +1,6 @@
 import React from "react";
-import {
-  getUserInformation,
-  setUserInformation,
-  resetUserInfo,
-} from "../../../redux/userDataSlice";
-import { useDispatch, useSelector } from "react-redux";
 
-const FirstQuestion = () => {
-  const userInformation = useSelector(getUserInformation);
-  const dispatch = useDispatch();
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    dispatch(setUserInformation({ name: name, data: value }));
-    dispatch(resetUserInfo("userHadCovid"));
-  };
-
+const Question21 = ({ handleChange, checkedValue }) => {
   return (
     <div className="first-question-content">
       <p className="question-texts">გაქვს გადატანილი Covid-19?*</p>
@@ -24,7 +9,7 @@ const FirstQuestion = () => {
           <input
             type="radio"
             name="userHadCovid"
-            checked={userInformation.userHadCovid === "კი"}
+            checked={checkedValue === "კი"}
             value="კი"
             className="first-question-radios"
             onChange={handleChange}
@@ -36,7 +21,7 @@ const FirstQuestion = () => {
           <input
             type="radio"
             name="userHadCovid"
-            checked={userInformation.userHadCovid === "არა"}
+            checked={checkedValue === "არა"}
             value="არა"
             className="first-question-radios"
             onChange={handleChange}
@@ -47,7 +32,7 @@ const FirstQuestion = () => {
           <input
             type="radio"
             name="userHadCovid"
-            checked={userInformation.userHadCovid === "ახლა მაქვს"}
+            checked={checkedValue === "ახლა მაქვს"}
             value="ახლა მაქვს"
             className="first-question-radios"
             onChange={handleChange}
@@ -59,4 +44,4 @@ const FirstQuestion = () => {
   );
 };
 
-export default FirstQuestion;
+export default Question21;
