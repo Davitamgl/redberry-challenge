@@ -35,6 +35,7 @@ const Question23 = () => {
         რაოდენობა*
       </p>
       <div className="inputs-container">
+      <div className="date-input-container">
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
           <DatePicker
             placeholder="დდ/თთ/წწ"
@@ -55,7 +56,7 @@ const Question23 = () => {
           />
         </MuiPickersUtilsProvider>
 
-        <div className="date-input-container"></div>
+        </div>
         <div className="number-input-container">
           <input
             className="number-input"

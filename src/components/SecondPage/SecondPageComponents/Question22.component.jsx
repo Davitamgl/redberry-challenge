@@ -1,4 +1,5 @@
 import React from "react";
+import { Radio } from "@material-ui/core";
 
 const Questiion22 = ({ handleChange, checkedValue }) => {
   return (
@@ -6,25 +7,27 @@ const Questiion22 = ({ handleChange, checkedValue }) => {
       <p className="question-texts">ანტისხეულების ტესტი გაქვს გაკეთებული?*</p>
       <div className="inputs-container">
         <div className="radio-label-wrapper">
-          <input
-            type="radio"
+          <Radio
+            className="material-radio"
+            style={{ color: "#232323" }}
             name="antiBodyTested"
             value="კი"
-            className="first-question-radios"
+            
             onChange={handleChange}
             checked={checkedValue === "კი"}
-          ></input>
+          />
           <label className="input-label">კი</label> 
         </div>
 
         <div className="radio-label-wrapper">
-          <input
-            type="radio"
+          <Radio
+             className="material-radio"
+             style={{ color: "#232323" }}
             name="antiBodyTested"
             onChange={handleChange}
             checked={checkedValue === "არა"}
             value="არა"
-            className="first-question-radios"
+            
           />
           <label className="input-label">არა</label> 
         </div>
