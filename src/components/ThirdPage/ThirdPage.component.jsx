@@ -5,48 +5,43 @@ import { ReactComponent as ThirdPageLogo } from "../../images/thirdPageLogo.svg"
 import {
   getUserInformation,
   setUserInformation,
-  resetUserInfo
+  resetUserInfo,
 } from "../../redux/userDataSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-import Question21 from "./ThirdPageComponents/Question21.component";
-import Question22 from "./ThirdPageComponents/Question22.component";
-import Question23 from "./ThirdPageComponents/Question23.component";
 import AdditionalLink from "./ThirdPageComponents/AdditionalLink.component";
+import Question31 from "./ThirdPageComponents/Question31.component";
+import Question32 from "./ThirdPageComponents/Question32.component";
+import Question33 from "./ThirdPageComponents/Question33.component";
 
 const ThirdPage = () => {
   const dispatch = useDispatch();
   const userInformation = useSelector(getUserInformation);
 
-  const [data, setData] = useState("");
-
-
-
   const handleChange = (e) => {
     const { name, value } = e.target;
-   
-    setData(value);
+
     dispatch(setUserInformation({ name: name, data: value }));
-    if(name === "vaccinated"){
-    dispatch(resetUserInfo("vaccinated"));
+    if (name === "vaccinated") {
+      dispatch(resetUserInfo("vaccinated"));
     }
   };
 
   return (
     <div className="third-page">
       <div className="third-page-components">
-        <Question21
+        <Question31
           handleChange={handleChange}
           checkedValue={userInformation.vaccinated}
         />
         {userInformation.vaccinated === "yes" ? (
-          <Question22
+          <Question32
             handleChange={handleChange}
             checkedValue={userInformation.vaccinationPhase}
           />
         ) : null}
         {userInformation.vaccinated === "no" ? (
-          <Question23
+          <Question33
             handleChange={handleChange}
             checkedValue={userInformation.whatUserIsWaitingFor}
           />

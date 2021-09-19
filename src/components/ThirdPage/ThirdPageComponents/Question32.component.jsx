@@ -2,7 +2,7 @@ import React from "react";
 import { Radio } from "@material-ui/core";
 
 
-const Question22 = ({ handleChange, checkedValue }) => {
+const Question32 = ({ handleChange, checkedValue }) => {
 
   return (
     <div className="second-question-content">
@@ -59,4 +59,4 @@ const Question22 = ({ handleChange, checkedValue }) => {
   );
 };
 
-export default Question22;
+export default Question32;

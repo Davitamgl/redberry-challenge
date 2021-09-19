@@ -1,7 +1,7 @@
 import React from "react";
 import { Radio } from "@material-ui/core";
 
-const Question22 = ({ handleChange, checkedValue }) => {
+const Question33 = ({ handleChange, checkedValue }) => {
   return (
     <div className="third-question-content">
       <p className="question-texts">რას ელოდები?*</p>
@@ -19,7 +19,7 @@ const Question22 = ({ handleChange, checkedValue }) => {
               onChange={handleChange}
             />
             <label className="input-label">
-            დარეგისტრირებული ვარ და ველოდები რიცხვს
+              დარეგისტრირებული ვარ და ველოდები რიცხვს
             </label>
              
           </div>
@@ -39,10 +39,7 @@ const Question22 = ({ handleChange, checkedValue }) => {
               name="whatUserIsWaitingFor"
               style={{ color: "#232323" }}
               value="გადატანილი მაქვს და ვგეგმავ აცრას"
-              checked={
-                checkedValue ===
-                "გადატანილი მაქვს და ვგეგმავ აცრას"
-              }
+              checked={checkedValue === "გადატანილი მაქვს და ვგეგმავ აცრას"}
               className="material-radio"
               onChange={handleChange}
             />
@@ -51,11 +48,10 @@ const Question22 = ({ handleChange, checkedValue }) => {
             </label>
              
           </div>
-          
         </div>
       </div>
     </div>
   );
 };
 
-export default Question22;
+export default Question33;
