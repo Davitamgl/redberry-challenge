@@ -1,5 +1,93 @@
-.ending-page{
-    height:100%;
-    background-color: #232323;
+.ending-page {
+  height: 100%;
+  background-color: #232323;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .ending-text-container {
+    color: white;
+    .ending-text {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 4.8rem;
+      letter-spacing: 0.24em;
+      animation-name: ending-text-animation;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      z-index: 5;
+    }
+  }
+  .large-ending-animation {
+    position: absolute;
+    right: 50%;
+    margin-right: 5em;
+    animation-name: large-svg-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    opacity: 0;
+  }
+  .small-ending-animation {
+    position: absolute;
+    left: 50%;
+    margin-left: 5em;
+    animation-name: small-svg-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    opacity: 0;
+  }
 
+  @keyframes ending-text-animation {
+    0% {
+      opacity: 0;
+    }
+
+    99% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes large-svg-animation {
+    0% {
+      transform: translateX(0em) translateY(0em);
+    }
+    50% {
+        opacity: 1;
+        transform: translatex(-3em) translatey(-5em);
+    }
+    99% {
+      opacity: 1;
+      transform: translatex(-3em) translatey(-5em);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translatex(-3em) translatey(-5em);
+    }
+  }
+  @keyframes small-svg-animation {
+    0% {
+      transform: translateX(0em) translateY(0em);
+    }
+   50% {
+        opacity: 1;
+        transform: translatex(3em) translatey(5em);
+    }
+    99% {
+      opacity: 1;
+      transform: translatex(3em) translatey(5em);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translatex(3em) translatey(5em);
+    }
+  }
 }

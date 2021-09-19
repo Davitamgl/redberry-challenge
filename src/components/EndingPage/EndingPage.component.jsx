@@ -1,29 +1,20 @@
 import React from "react";
 
-import { useDispatch } from "react-redux";
-import {endStartPage} from "../../redux/pageSlice";
-
-import { ReactComponent as Redberry } from "../../images/Vector1.svg";
+import { ReactComponent as EndAnimationSmall } from "../../images/endanimationSmallSvg.svg";
+import { ReactComponent as EndAnimationLarge } from "../../images/endAnimationLargeSvg.svg";
 
 import "./EndingPage.styles.scss";
 
 const EndingPage = () => {
-
-  const dispatch = useDispatch();
-
-
-
-  const handleClick = () => {
-    dispatch(endStartPage());
-  };
-
   return (
     <div className="ending-page">
-      <Redberry className="redberry-svg" />
-      <div className="ending-text" onClick={handleClick}>
-        <span>კითხვარის</span>
-        <span>დაწყება</span>
+      <div className="ending-text-container">
+        <div className="ending-text">მადლობა</div>
       </div>
+
+      <EndAnimationLarge className="large-ending-animation" />
+
+      <EndAnimationSmall className="small-ending-animation" />
     </div>
   );
 };
