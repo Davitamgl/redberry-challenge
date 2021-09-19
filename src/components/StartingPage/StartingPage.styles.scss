@@ -1,5 +1,5 @@
 .starting-page {
-  // flex-wrap: wrap;
+  width: 100%;
   height: 100%;
   background-color: #eaeaea;
   position: relative;
@@ -7,8 +7,7 @@
     width: 100%;
     height: 100px;
     top: 21.438em;
-    // padding-top: 11.438em;
-    // margin-bottom: 10em;
+
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -16,30 +15,19 @@
 
     align-items: center;
     .redberry-svg {
-      // top:0;
-      // left:0;
-      // margin-left: auto;
-      // margin-right: auto;
       animation-name: starting-animation;
-      animation-duration: 0.5s;
-      
+      animation-duration: 1s;
     }
     @keyframes starting-animation {
       0% {
         position: absolute;
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
-       
+
         width: 4212.32px;
         height: 4211.68px;
       }
       99% {
         position: absolute;
-        // top: 50%;
-        // left: 50%;
 
-        // transform: translate(-50%, -50%);
         position: absolute;
       }
 
@@ -62,56 +50,35 @@
     margin-right: auto;
     width: 180px;
     transform: translateY(-100%);
-    
-  
+
     .starting-text {
       text-align: center;
       cursor: pointer;
       font-weight: 700;
       font-size: 1.5rem;
-     
+
       animation-name: starting-text-animation;
-      animation-duration: 1s;
+      animation-duration: 1.5s;
       animation-fill-mode: forwards;
-      visibility:hidden;
+      visibility: hidden;
       //  display: none;
       &:hover {
         text-shadow: 0.9px 0.9px;
       }
     }
     @keyframes starting-text-animation {
-      // 0% {
-        
-      //   transform: translateY(0);
-      
-
-      // }
-      // 25% {
-        
-      //   transform: translateY(100%);
-      // }
-      // 50% {
-      
-      //   transform: translateY(100%);
-      
-    //  }
-     0% {
-     
+      0% {
         transform: translateY(0);
-        visibility:hidden;
-        //  display:visible
+        visibility: hidden;
       }
-     99% {
-     
+      99% {
         transform: translateY(100%);
-        visibility:hidden;
-        //  display:visible
+        visibility: hidden;
       }
 
-      100%{
+      100% {
         transform: translateY(100%);
-        visibility:visible;
-        // display:visible
+        visibility: visible;
       }
     }
   }
