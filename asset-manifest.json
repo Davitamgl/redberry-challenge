@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/redberry-challenge/static/css/main.dc213ebd.chunk.css",
-    "main.js": "/redberry-challenge/static/js/main.8d1fb249.chunk.js",
-    "main.js.map": "/redberry-challenge/static/js/main.8d1fb249.chunk.js.map",
+    "main.js": "/redberry-challenge/static/js/main.b35b1333.chunk.js",
+    "main.js.map": "/redberry-challenge/static/js/main.b35b1333.chunk.js.map",
     "runtime-main.js": "/redberry-challenge/static/js/runtime-main.c21d3c35.js",
     "runtime-main.js.map": "/redberry-challenge/static/js/runtime-main.c21d3c35.js.map",
     "static/js/2.25ca9f97.chunk.js": "/redberry-challenge/static/js/2.25ca9f97.chunk.js",
@@ -25,6 +25,6 @@
     "static/js/runtime-main.c21d3c35.js",
     "static/js/2.25ca9f97.chunk.js",
     "static/css/main.dc213ebd.chunk.css",
-    "static/js/main.8d1fb249.chunk.js"
+    "static/js/main.b35b1333.chunk.js"
   ]
 }
