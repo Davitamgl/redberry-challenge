@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/redberry-challenge/static/css/main.dc213ebd.chunk.css",
+    "main.css": "/redberry-challenge/static/css/main.01ad91e6.chunk.css",
     "main.js": "/redberry-challenge/static/js/main.b35b1333.chunk.js",
     "main.js.map": "/redberry-challenge/static/js/main.b35b1333.chunk.js.map",
     "runtime-main.js": "/redberry-challenge/static/js/runtime-main.c21d3c35.js",
@@ -8,7 +8,7 @@
     "static/js/2.25ca9f97.chunk.js": "/redberry-challenge/static/js/2.25ca9f97.chunk.js",
     "static/js/2.25ca9f97.chunk.js.map": "/redberry-challenge/static/js/2.25ca9f97.chunk.js.map",
     "index.html": "/redberry-challenge/index.html",
-    "static/css/main.dc213ebd.chunk.css.map": "/redberry-challenge/static/css/main.dc213ebd.chunk.css.map",
+    "static/css/main.01ad91e6.chunk.css.map": "/redberry-challenge/static/css/main.01ad91e6.chunk.css.map",
     "static/js/2.25ca9f97.chunk.js.LICENSE.txt": "/redberry-challenge/static/js/2.25ca9f97.chunk.js.LICENSE.txt",
     "static/media/Vector1.8834e31a.svg": "/redberry-challenge/static/media/Vector1.8834e31a.svg",
     "static/media/endAnimationLargeSvg.ce4abbb2.svg": "/redberry-challenge/static/media/endAnimationLargeSvg.ce4abbb2.svg",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.c21d3c35.js",
     "static/js/2.25ca9f97.chunk.js",
-    "static/css/main.dc213ebd.chunk.css",
+    "static/css/main.01ad91e6.chunk.css",
     "static/js/main.b35b1333.chunk.js"
   ]
 }
