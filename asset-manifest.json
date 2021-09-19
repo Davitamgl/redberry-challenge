@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dc213ebd.chunk.css",
+    "main.js": "/static/js/main.a864646f.chunk.js",
+    "main.js.map": "/static/js/main.a864646f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.62000460.js",
+    "runtime-main.js.map": "/static/js/runtime-main.62000460.js.map",
+    "static/js/2.25ca9f97.chunk.js": "/static/js/2.25ca9f97.chunk.js",
+    "static/js/2.25ca9f97.chunk.js.map": "/static/js/2.25ca9f97.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.dc213ebd.chunk.css.map": "/static/css/main.dc213ebd.chunk.css.map",
+    "static/js/2.25ca9f97.chunk.js.LICENSE.txt": "/static/js/2.25ca9f97.chunk.js.LICENSE.txt",
+    "static/media/Vector1.8834e31a.svg": "/static/media/Vector1.8834e31a.svg",
+    "static/media/endAnimationLargeSvg.ce4abbb2.svg": "/static/media/endAnimationLargeSvg.ce4abbb2.svg",
+    "static/media/endanimationSmallSvg.80ad3196.svg": "/static/media/endanimationSmallSvg.80ad3196.svg",
+    "static/media/firstPageLogo.55b2e615.svg": "/static/media/firstPageLogo.55b2e615.svg",
+    "static/media/fourthPageLogo.a0b27b44.svg": "/static/media/fourthPageLogo.a0b27b44.svg",
+    "static/media/nextPage.dd743c5a.svg": "/static/media/nextPage.dd743c5a.svg",
+    "static/media/prevPage.b5c89d12.svg": "/static/media/prevPage.b5c89d12.svg",
+    "static/media/redberry.37fe6063.svg": "/static/media/redberry.37fe6063.svg",
+    "static/media/secondPageLogo.471acffb.svg": "/static/media/secondPageLogo.471acffb.svg",
+    "static/media/thirdPageLogo.a4df43d0.svg": "/static/media/thirdPageLogo.a4df43d0.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.62000460.js",
+    "static/js/2.25ca9f97.chunk.js",
+    "static/css/main.dc213ebd.chunk.css",
+    "static/js/main.a864646f.chunk.js"
+  ]
+}
