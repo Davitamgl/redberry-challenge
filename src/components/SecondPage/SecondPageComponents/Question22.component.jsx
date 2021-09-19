@@ -6,7 +6,9 @@ const Questiion22 = ({ handleChange, checkedValue }) => {
     <div className={"second-question-content"}>
       <p className="question-texts">ანტისხეულების ტესტი გაქვს გაკეთებული?*</p>
       <div className="inputs-container">
+     
         <div className="radio-label-wrapper">
+        <div className="radio-label">
           <Radio
             className="material-radio"
             style={{ color: "#232323" }}
@@ -18,8 +20,10 @@ const Questiion22 = ({ handleChange, checkedValue }) => {
           />
           <label className="input-label">კი</label> 
         </div>
+        </div>
 
         <div className="radio-label-wrapper">
+        <div className="radio-label">
           <Radio
              className="material-radio"
              style={{ color: "#232323" }}
@@ -30,6 +34,7 @@ const Questiion22 = ({ handleChange, checkedValue }) => {
             
           />
           <label className="input-label">არა</label> 
+        </div>
         </div>
       </div>
     </div>

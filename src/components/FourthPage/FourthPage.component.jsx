@@ -85,9 +85,9 @@ if(name === "submitButtonClicked" &&  value === "submit"){
           </div>
         </div>
       </div>
-      <span className="logo-container">
-        <FourthPageLogo className="second-page-logo" />
-      </span>
+      
+        <FourthPageLogo className="fourth-page-logo" />
+      
     </div>
   );
 };

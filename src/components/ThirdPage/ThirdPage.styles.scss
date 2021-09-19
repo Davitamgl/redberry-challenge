@@ -1,19 +1,69 @@
 .third-page {
   height: 100%;
   position: relative;
-  // overflow: hidden;
-  .logo-container {
+  overflow: hidden;
+  .third-page-logo {
     position: absolute;
     height: 892px;
     width: 949px;
     left: 851px;
     top: 60px;
+    @media only screen and (max-width: 1919px) {
+      position: absolute;
+      height: 892px;
+      width: 949px;
+      left: 43%;
+      top: 0;
+    }
+
+    @media only screen and (max-width: 1440px) {
+      position: absolute;
+      height: 592px;
+      width: 649px;
+      left: 50%;
+      top: 0;
+    }
+    @media only screen and (max-width: 1224px) {
+      position: absolute;
+      height: 492px;
+      width: 449px;
+      left: 55%;
+      top: -50px;
+    }
+    @media only screen and (max-width: 1024px) {
+      position: absolute;
+      height: 392px;
+      width: 349px;
+      left: 55%;
+      top: -50px;
+    }
+    @media only screen and (max-width: 786px) {
+      position: absolute;
+      height: 292px;
+      width: 249px;
+      left: 55%;
+      top: -40px;
+    }
+    @media only screen and (max-width: 480px) {
+      position: absolute;
+      height: 192px;
+      width: 149px;
+      left: 50%;
+      top: 0;
+    }
   }
   .third-page-components {
     margin: 0em 12.5em;
-    max-width: 700px;
+    ax-width: 596px;
     margin: 0em 12.5em;
-
+    @media only screen and (max-width: 1224px) {
+      margin: 0em 6em;
+      max-width: 596px;
+    }
+    @media only screen and (max-width: 768px) {
+      margin: 0em 2em;
+      max-width: 596px;
+    }
     .first-question-content {
       .radio-label-wrapperr {
         display: flex;
@@ -41,7 +91,7 @@
   vertical-align: middle;
 }
 .link-and-text-container {
-  width: 500px;
+  max-width: 596px;
 }
 
 a {
@@ -68,9 +118,9 @@ a:hover {
   color: #232323;
   font-size: 1.25rem;
   font-weight: 400;
-
+// max-width: 300px;
   line-height: 1.509em;
 }
 .additional-info {
-  margin-bottom: 1.813em;
+  // margin-bottom: 1.813em;
 }

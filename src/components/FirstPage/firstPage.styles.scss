@@ -7,19 +7,55 @@
   .content-wrapper {
     margin: 0em 12.5em;
     height: 100%;
+    max-width: 596px;
+    @media only screen and (max-width: 1224px) {
+      margin: 0em 6em;
+      max-width: 596px;
+    }
+    @media only screen and (max-width: 768px) {
+      margin: 0em 2em;
+      max-width: 596px;
+    }
   }
-  .firstPageLogo-container {
+  .first-page-logo {
     position: absolute;
-    // height: 831px;
-    // width: 904px;
+
     left: 851px;
     top: -40px;
     border-radius: 0px;
-
-    // top: 0;
-    // left: 0;
-    // width: 100%;
-    // height: 100%;
     pointer-events: none;
+    @media only screen and (max-width: 1919px) {
+      position: absolute;
+      height: 892px;
+      width: 949px;
+      left: 43%;
+      top: 0;
+    }
+
+    @media only screen and (max-width: 1440px) {
+      position: absolute;
+      height: 592px;
+      width: 649px;
+      left: 50%;
+      top: 0;
+    }
+    @media only screen and (max-width: 1224px) {
+      position: absolute;
+      height: 492px;
+      width: 449px;
+      left: 55%;
+      top: -50px;
+    }
+    @media only screen and (max-width: 1044px) {
+      position: absolute;
+      height: 342px;
+      width: 300px;
+      left: 65%;
+      top: -50px;
+    }
+    @media only screen and (max-width: 890px) {
+     
+      display: none;
+    }
   }
 }

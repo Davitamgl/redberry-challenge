@@ -49,9 +49,9 @@ const SecondPage = () => {
         {userInformation.antiBodyTested === "არა" ? <Question24 /> : null}
       </div>
 
-      <div className="logo-container">
+      
         <SecondPageLogo className="second-page-logo" />
-      </div>
+      
     </div>
   );
 };

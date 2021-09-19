@@ -45,7 +45,9 @@
         letter-spacing: 0em;
         background-color: #c4c4c400;
         border: 0.8px solid #232323;
-        width: 513px; //26.71%;
+        max-width: 513px; //26.71%;
+        width: 90vw;
+       
         outline: none;
       }
       .error-message {

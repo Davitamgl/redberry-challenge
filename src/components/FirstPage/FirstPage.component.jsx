@@ -14,9 +14,9 @@ const FirstPage = () => {
         <SignUpForm />
       </div>
 
-      <div className="firstPageLogo-container">
+    
         <FirstPageLogo className="first-page-logo" />
-      </div>
+      
     </div>
   );
 };

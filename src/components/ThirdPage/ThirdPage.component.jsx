@@ -49,9 +49,8 @@ const ThirdPage = () => {
         <AdditionalLink />
       </div>
 
-      <div className="logo-container">
         <ThirdPageLogo className="third-page-logo" />
-      </div>
+      
     </div>
   );
 };
