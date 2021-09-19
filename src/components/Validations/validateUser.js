@@ -1,4 +1,4 @@
-const latestValidation = (values) => {
+const validateUser = (values) => {
   const errors = {};
 
   //////////////////////////FirstName/////////////////////
@@ -57,11 +57,11 @@ const latestValidation = (values) => {
       errors.emailError =
         "გთხოვთ დარეგისტრირდეთ რედბერის მეილით(youremail@redberry.ge)";
     } else {
-      errors.email = "";
+      errors.emailError = "";
     }
   }
 
   return errors;
 };
 
-export default latestValidation;
+export default validateUser;

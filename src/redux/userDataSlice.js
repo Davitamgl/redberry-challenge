@@ -1,10 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  validatedData: {
-    validFirstName: "",
-    validLastName: "",
-    validEmail: "",
+  validationErrors: {
+    firstNameError: "",
+    lastNameError: "",
+    emailError: "",
+  },
+  validationData: {
+    firstName: "",
+    lastName: "",
+    email: "",
   },
   userInformation: {
     userHadCovid: "",
@@ -30,20 +35,31 @@ export const userDataSlice = createSlice({
   name: "userData",
   initialState,
   reducers: {
+    setValidationData: (state, action) => {
+      switch (action.payload.name) {
+        case "firstName":
+          state.validationData.firstName = action.payload.data;
+          break;
+        case "lastName":
+          state.validationData.lastName = action.payload.data;
+          break;
+        case "email":
+          state.validationData.email = action.payload.data;
+          break;
+
+        default:
+          console.log("unexpected data");
+      }
+    },
+    setValidationErrors: (state, action) => {
+      state.validationErrors.firstNameError = action.payload.firstNameError;
+      state.validationErrors.lastNameError = action.payload.lastNameError;
+      state.validationErrors.emailError = action.payload.emailError;
+    },
     setIsValidUser: (state, action) => {
       state.validUser = action.payload;
     },
-    setValidationData: (state, action) => {
-      if (action.payload === false) {
-        state.validatedData.validFirstName = "";
-        state.validatedData.validLastName = "";
-        state.validatedData.validEmail = "";
-      } else {
-        state.validatedData.validFirstName = action.payload.firstName;
-        state.validatedData.validLastName = action.payload.lastName;
-        state.validatedData.validEmail = action.payload.email;
-      }
-    },
+
     setUserInformation: (state, action) => {
       switch (action.payload.name) {
         case "userHadCovid":
@@ -92,11 +108,11 @@ export const userDataSlice = createSlice({
           state.userInformation.submitButtonClicked = action.payload.data;
           break;
 
-        default: console.log("unexpected data");
+        default:
+          console.log("unexpected data");
       }
     },
     resetUserInfo: (state, action) => {
-  
       switch (action.payload) {
         case "userHadCovid":
           state.userInformation.antiBodyTested = "";
@@ -124,12 +140,14 @@ export const userDataSlice = createSlice({
 export const {
   setIsValidUser,
   setValidationData,
+  setValidationErrors,
   setUserInformation,
   resetUserInfo,
 } = userDataSlice.actions;
 
 export const getIsUserValid = (state) => state.userData.validUser;
-export const getValidationData = (state) => state.userData.validatedData;
+export const getValidationData = (state) => state.userData.validationData;
 export const getUserInformation = (state) => state.userData.userInformation;
+export const getValidationErrors = (state) => state.userData.validationErrors;
 
 export default userDataSlice.reducer;

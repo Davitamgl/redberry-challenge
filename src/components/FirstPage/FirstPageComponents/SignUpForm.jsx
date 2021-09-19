@@ -1,68 +1,47 @@
 import React, { useState, useEffect } from "react";
-import latestValidation from "../ValidateUser/ValidateUser";
+import validateUser from "../../Validations/validateUser";
 
 import {
   setIsValidUser,
-  
+  setValidationErrors,
+  getValidationErrors,
   setValidationData,
   getValidationData,
-} from "../../redux/userDataSlice";
-import { getCurrentPage } from "../../redux/pageSlice";
+} from "../../../redux/userDataSlice";
+
 
 import { useDispatch, useSelector } from "react-redux";
 
 import "./SignUpForm.styles.scss";
 
-const LatestSignUpForm = () => {
+const SignUpForm = () => {
+
   const dispatch = useDispatch();
-  const [errors, setErrors] = useState({});
-
   const validationData = useSelector(getValidationData);
+  const validationErrors = useSelector(getValidationErrors);
 
-  // const isUserValid = useSelector(getIsUserValid);
-  // const currentPage = useSelector(getCurrentPage);
 
-  const [values, setValues] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-  });
 
   const handleChange = (e) => {
-    setValues({
-      ...values,
-      [e.target.name]: e.target.value,
-    });
-    // dispatch(setIsValidUser(false));
-    // dispatch(setValidationData(false));
+    const { name, value } = e.target;
+    dispatch(setValidationData({ name: name, data: value }));
   };
 
-  // const handleError = () => {
-  //   setErrors(latestValidation(values));
-  // };
   useEffect(() => {
-    setValues({
-      firstName: validationData.validFirstName,
-      lastName: validationData.validLastName,
-      email: validationData.validEmail,
-    });
-  }, []);
-
-  useEffect(() => {
-    setErrors(latestValidation(values));
-  }, [values]);
+    dispatch(setValidationErrors(validateUser(validationData)));
+  }, [validationData]);
 
   useEffect(() => {
     if (
-      Object.values(values).every((x) => x !== "") &&
-      Object.values(values).every((x) => x.length >= 3) &&
-      Object.values(errors).every((x) => x === "")
+      Object.values(validationData).every((x) => x !== "") &&
+      Object.values(validationData).every((x) => x.length >= 3) &&
+      Object.values(validationErrors).every((x) => x === "")
     ) {
-      dispatch(setIsValidUser(true), dispatch(setValidationData(values)));
+      dispatch(setIsValidUser(true));
     } else {
-      dispatch(setIsValidUser(false), dispatch(setValidationData(false)));
+      dispatch(setIsValidUser(false));
     }
-  }, [errors]);
+  }, [validationErrors]);
 
   return (
     <div className="firstpage-elements-container">
@@ -77,14 +56,16 @@ const LatestSignUpForm = () => {
               name="firstName"
               className="firstName-input"
               onChange={handleChange}
-              value={values.firstName}
+              value={validationData.firstName}
             />
             <div
               className={
-                errors.firstNameError ? "error-message" : "error-message-hidden"
+                validationErrors.firstNameError
+                  ? "error-message"
+                  : "error-message-hidden"
               }
             >
-              {errors.firstNameError}
+              {validationErrors.firstNameError}
             </div>
           </div>
           <div className="form-input-two">
@@ -95,15 +76,17 @@ const LatestSignUpForm = () => {
               type="text"
               name="lastName"
               className="lastName-input"
-              value={values.lastName}
+              value={validationData.lastName}
               onChange={handleChange}
             />
             <div
               className={
-                errors.lastNameError ? "error-message" : "error-message-hidden"
+                validationErrors.lastNameError
+                  ? "error-message"
+                  : "error-message-hidden"
               }
             >
-              {errors.lastNameError}
+              {validationErrors.lastNameError}
             </div>
           </div>
           <div className="form-input-three">
@@ -114,15 +97,17 @@ const LatestSignUpForm = () => {
               type="email"
               name="email"
               className="email-input"
-              value={values.email}
+              value={validationData.email}
               onChange={handleChange}
             />
             <div
               className={
-                errors.emailError ? "error-message" : "error-message-hidden"
+                validationErrors.emailError
+                  ? "error-message"
+                  : "error-message-hidden"
               }
             >
-              {errors.emailError}
+              {validationErrors.emailError}
             </div>
           </div>
           <div className="note-text">
@@ -134,4 +119,4 @@ const LatestSignUpForm = () => {
   );
 };
 
-export default LatestSignUpForm;
+export default SignUpForm;

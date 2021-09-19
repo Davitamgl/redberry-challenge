@@ -3,7 +3,7 @@ import { ReactComponent as FirstPageLogo } from "../../images/firstPageLogo.svg"
 
 import "./firstPage.styles.scss";
 
-import SignUpForm from "../SignUpForm/SignUpForm";
+import SignUpForm from  './FirstPageComponents/SignUpForm'
 
 const FirstPage = () => {
 

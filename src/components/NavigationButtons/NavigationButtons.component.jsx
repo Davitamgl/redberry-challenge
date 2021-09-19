@@ -9,7 +9,7 @@ import {
 import { ReactComponent as NextPageButton } from "../../images/nextPage.svg";
 import { ReactComponent as PrevPageButton } from "../../images/prevPage.svg";
 
-import PageValidation from "../PageValidations/PageValidation";
+import PageValidation from "../Validations/PageValidation";
 import { useSelector, useDispatch } from "react-redux";
 
 import "./NavigationButtons.styles.scss";
