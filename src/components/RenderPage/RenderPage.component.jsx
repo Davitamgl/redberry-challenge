@@ -8,7 +8,7 @@ import FourthPage from "../FourthPage/FourthPage.component";
 import { getCurrentPage } from "../../redux/pageSlice";
 import { useSelector } from "react-redux";
 
-const TestRender = () => {
+const RenderPage = () => {
   const currentPage = useSelector(getCurrentPage);
   
 
@@ -27,5 +27,5 @@ const TestRender = () => {
   }
 };
 
-export default TestRender;
+export default RenderPage;
 

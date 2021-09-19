@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  startingPage: false,
+  startingPage: true,
   endingPage: false,
   activePage: 
   1,

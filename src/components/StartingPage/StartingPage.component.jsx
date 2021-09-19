@@ -19,6 +19,7 @@ const StartingPage = () => {
       <div className="animation-container">
         <RedberryAnimation className="redberry-svg" />
       </div>
+      
       <div className="starting-text-container" onClick={handleClick}>
         <div className="starting-text">კითხვარის დაწყება</div>
       </div>
