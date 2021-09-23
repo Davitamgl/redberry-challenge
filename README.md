@@ -34,6 +34,27 @@
 
 
 
+## Clone the project
+
+```bash
+$ git clone https://github.com/Davitamgl/redberry-challenge.git
+
+```
+
+
+## Install
+
+```sh
+npm install
+```
+
+## Usage
+
+```sh
+npm run start
+```
+
+
 
 
 
